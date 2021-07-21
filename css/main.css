@@ -6,25 +6,85 @@
 /* header start */
 .header{
    background-color: #2E294E;
+}
+.header-inner{
    display: flex;
    justify-content: space-between;
+   align-items: center;
    color: #FEFEFE;
+   padding: 15px 80px 15px 120px;
 }
 .header-nav{
    display: flex;
    flex-direction: column;
+   align-self: flex-end;
+}
+.header-nav .header-nav_item:nth-child(2){
+   border-top: 1px solid #FEFEFE;
+   padding-top: 15px;
+}
+.header-nav_item{
+   padding: 5px 0;
 }
 .nav{
    display: flex;
-   justify-content: space-between
+   justify-content: space-between;
 }
 .header-nav_text, .nav-item{
    text-transform: uppercase;
+}
+.nav-item_link{
+   text-decoration: none;
+   color: #FEFEFE;
+}
+/* link effect start*/
+.nav-item .nav-item_link{
+   display: inline-block;
+	cursor: pointer;
+   position: relative;
+	white-space: nowrap;
+}
+.nav-item .nav-item_link:after{
+   display: block;
+	content: "";
+	background-color: #FEFEFE;
+	height: 1px;
+	width: 0%;
+	left: 50%;
+	position: absolute;
+	-webkit-transition: width .3s ease-in-out;
+	-moz--transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.nav-item .nav-item_link:hover:after,
+.nav-item .nav-item_link:focus:after{
+   width: 100%;
+}
+.nav-item .nav-item_link{
+	font-size: 14px;
+	line-height: 18px;
+	color: #FEFEFE;
+	text-decoration: none;
+	/* font-family: 'Arsenal'; */
+}
+.nav-item .nav-item_link:hover{
+	color: #FEFEFE;
+	text-decoration: none;
+}
+/* link effect end*/
+.header-nav_text{
+   font-weight: 200;
+   font-size: 36px;
+   line-height: 43px;
 }
 .header-logo{
    display: flex;
    flex-direction: column;
    text-decoration: none;
+   justify-content: center;
 }
 .header-logo_pic{
    display: block;
@@ -34,6 +94,28 @@
 .header-logo_text{
    text-transform: uppercase;
    color: #FEFEFE;
-
+   margin-top: 10px;
 }
 /* header end */
+/* services start */
+.services{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 2vw;
+}
+.services-item{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.services-item_text{
+   padding-top: 15px;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 20px;
+   line-height: 23px;
+   text-align: center;
+   color: #000000;
+}
+/* services end */
